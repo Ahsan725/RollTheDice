@@ -10,15 +10,16 @@ public class RollTheDice {
 
 
         //create an obj of Dice
-        Dice dice = new Dice();
+        Dice dice = new Dice(); //creates a typical 6 sided dice
+        Dice dice2 = new Dice(1, 9); //9 sided dice, won't be using this for this exercise
 
 
-        for(var i = 0; i < 100; i++){
+        for (var i = 0; i < 100; i++) {
             roll1 = dice.roll();
             roll2 = dice.roll();
             var sum = roll1 + roll2;
             System.out.println("Roll 1: " + roll1 + ", Roll 2: " + roll2 + ", Sum: " + sum);
-            if (sum == 2 || sum == 4 || sum == 6 || sum == 7){
+            if (sum == 2 || sum == 4 || sum == 6 || sum == 7) {
                 System.out.println("\nAha! just what I was looking for!\n");
             }
             switch (sum) {
